@@ -1,0 +1,237 @@
+/* ===============================
+   DASHBOARD LAYOUT & GENERAL
+==================================*/
+.app-container {
+  min-height: 100vh;
+  background:linear-gradient(135deg, #0ea5e9, #2563eb);
+  color: #e2e8f0;
+  display: flex;
+  flex-direction: column;
+}
+
+/* Header Section */
+header {
+  border-bottom: linear-gradient(135deg, #0ea5e9, #2563eb);
+}
+header h4 svg {
+  vertical-align: middle;
+  margin-right: 10px;
+}
+header .btn {
+  font-weight: 500;
+}
+
+/* ===============================
+   SEARCH SECTION
+==================================*/
+.search-view {
+  max-width: 700px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+}
+
+.search-wrapper {
+  position: relative;
+  width: 100%;
+  max-width: 500px;
+}
+
+.search-input {
+  padding-left: 40px;
+  border-radius: 10px;
+  background-color: #1e293b;
+  border: 1px solid #334155;
+  color: #f8fafc;
+  height: 50px;
+}
+
+.search-input::placeholder {
+  color: #94a3b8;
+}
+
+.search-icon {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  color: #94a3b8;
+}
+
+.search-spinner {
+  position: absolute;
+  right: 12px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+.text1-info{
+    color: white;
+}
+.text-body-secondary1{
+    color: white;
+}
+/* Search Results */
+.search-results-container {
+  max-height: 350px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #475569 #1e293b;
+}
+
+.search-results-container::-webkit-scrollbar {
+  width: 6px;
+}
+.search-results-container::-webkit-scrollbar-thumb {
+  background-color: #475569;
+  border-radius: 4px;
+}
+
+/* ===============================
+   STOCK INFO CARDS
+==================================*/
+.info-card {
+  border-radius: 16px !important;
+  text-align: center;
+  transition: all 0.3s ease;
+  background: white  !important;
+  color:white;
+}
+.info-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 6px 16px rgba(0, 0, 0, 0.3);
+}
+.info-card .card-body {
+  padding: 1.2rem 1rem;
+}
+.info-card .card-subtitle {
+  font-size: 0.85rem;
+  color: #94a3b8;
+}
+.info-card .card-title {
+  font-size: 1.4rem;
+}
+.info-card small {
+  font-size: 0.8rem;
+}
+
+/* ===============================
+   CHART SECTION
+==================================*/
+.chart-container {
+  border-radius: 16px;
+  background-color: #1e293b;
+  margin-top: 1rem;
+  min-height: 300px;
+  overflow: hidden;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.2);
+}
+
+/* Chart responsiveness */
+@media (max-width: 768px) {
+  .chart-container {
+    min-height: 250px;
+    padding: 0.8rem;
+  }
+}
+
+/* ===============================
+   DASHBOARD HEADER (STOCK VIEW)
+==================================*/
+.dashboard-header h2 {
+  color: #38bdf8;
+  font-size: 2.5rem;
+}
+.dashboard-header p {
+  color: #94a3b8;
+  margin: 0;
+}
+.dashboard-header button {
+  font-size: 0.95rem;
+  padding: 0.5rem 1.2rem;
+  border-radius: 10px;
+}
+
+/* ===============================
+   RESPONSIVENESS
+==================================*/
+
+/* Medium devices (tablets, <=992px) */
+@media (max-width: 992px) {
+  header h4 {
+    font-size: 1.2rem;
+  }
+
+  .dashboard-header h2 {
+    font-size: 2rem;
+  }
+
+  .info-card .card-title {
+    font-size: 1.2rem;
+  }
+
+  .row.g-3.g-lg-4 {
+    gap: 1rem !important;
+  }
+}
+
+/* Small devices (phones, <=768px) */
+@media (max-width: 768px) {
+  .app-container header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .dashboard-header {
+    flex-direction: column;
+    gap: 10px;
+    text-align: center;
+  }
+
+  .dashboard-header h2 {
+    font-size: 1.8rem;
+  }
+
+  .search-wrapper {
+    max-width: 100%;
+  }
+
+  .search-input {
+    font-size: 0.95rem;
+  }
+
+  .info-card {
+    margin-bottom: 10px;
+  }
+
+  .chart-container {
+    margin-top: 1rem;
+    padding: 0.5rem;
+  }
+
+  .info-card .card-body {
+    padding: 1rem;
+  }
+}
+
+/* Extra small devices (<=480px) */
+@media (max-width: 480px) {
+  .dashboard-header h2 {
+    font-size: 1.5rem;
+  }
+
+  .dashboard-header p {
+    font-size: 0.9rem;
+  }
+
+  .info-card .card-title {
+    font-size: 1.1rem;
+  }
+
+  .info-card .card-subtitle {
+    font-size: 0.8rem;
+  }
+
+  .search-input {
+    height: 45px;
+  }
+}

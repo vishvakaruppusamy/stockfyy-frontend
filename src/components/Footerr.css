@@ -1,0 +1,155 @@
+/* --- Footer Styles --- */
+:root {
+    --footer-bg: #111111;
+    --footer-text: #adb5bd;
+    --footer-heading: #ffffff;
+    --footer-border: #343a40;
+    --accent-color: #38bdf8; /* Light Blue */
+}
+
+.site-footer {
+    background-color: var(--footer-bg);
+    color: var(--footer-text);
+    padding: 50px 0;
+    font-size: 15px;
+    border-top: 1px solid var(--footer-border);
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* --- Top Section: Links & Subscribe --- */
+.footer-top {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 40px;
+    margin-bottom: 40px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.footer-column h4 {
+    color: var(--footer-heading);
+    font-weight: 600;
+    margin-bottom: 20px;
+    font-size: 1.1rem;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.footer-column ul li {
+    margin-bottom: 12px;
+}
+
+.footer-column ul li a {
+    color: var(--footer-text);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-column ul li a:hover {
+    color: var(--accent-color);
+}
+
+.footer-subscribe {
+    max-width: 350px;
+}
+
+.footer-subscribe h4 {
+    color: var(--footer-heading);
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer-subscribe p {
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.footer-subscribe form {
+    display: flex;
+}
+
+.footer-subscribe input[type="email"] {
+    flex-grow: 1;
+    padding: 10px 15px;
+    border: 1px solid var(--footer-border);
+    background-color: #1c1c1c;
+    color: var(--footer-heading);
+    border-radius: 5px 0 0 5px;
+    outline: none;
+}
+
+.footer-subscribe button {
+    padding: 10px 20px;
+    border: none;
+    background-color: var(--accent-color);
+    color: #fff;
+    font-weight: 600;
+    border-radius: 0 5px 5px 0;
+    cursor: pointer;
+    transition: background-color 0.2s ease;
+}
+
+.footer-subscribe button:hover {
+    background-color: #0ea5e9; /* Darker shade of accent color */
+}
+
+/* --- Bottom Section: Copyright & Social --- */
+.footer-bottom {
+    border-top: 1px solid var(--footer-border);
+    padding-top: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.footer-copyright {
+    margin: 0;
+}
+
+.footer-social {
+    display: flex;
+    gap: 15px;
+}
+
+.footer-social a {
+    color: var(--footer-text);
+    transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.footer-social a:hover {
+    color: var(--accent-color);
+    transform: translateY(-2px);
+}
+
+/* --- Responsive Design --- */
+@media (max-width: 992px) {
+    .footer-top {
+        flex-direction: column;
+    }
+    .footer-subscribe {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .footer-bottom {
+        flex-direction: column;
+        text-align: center;
+    }
+}
